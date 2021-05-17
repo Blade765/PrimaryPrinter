@@ -55,7 +55,8 @@ M557 X45:300 Y15:294 S60                                ; define mesh grid
 ; Heaters
 M308 S0 P"temp0" Y"thermistor" T100000 B4138            ; configure sensor 0 as thermistor on pin temp0
 M950 H0 C"out1" T0                                      ; create bed heater output on out1 and map it to sensor 0
-M307 H0 R0.675 C230.6 D3.35 S1.00                       ; enable PID mode for the bed heater with PWM set at 1.00
+; M307 H0 R0.675 C230.6 D3.35 S1.00                       ; enable PID mode for the bed heater with PWM set at 1.00
+M307 H1 B0 R4.954 C223.4:133.9 D9.13 S1.00 V23.8        ; New Auto Tune
 M140 H0                                                 ; map heated bed to heater 0
 M143 H0 S120                                            ; set temperature limit for heater 0 to 120C
 M308 S1 P"20.temp0" Y"pt1000" R2200                     ; configure sensor 1 as PT1000 on pin 121.temp0
